@@ -10,8 +10,9 @@ dataSources:
     name: ENSRegistry
     network: mainnet
     source:
-      address: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e'
+      address: "0xb9930eF91BADBC650269c382E3B5877574e6a7fc"
       abi: EnsRegistry
+      startBlock: 12159488
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -37,8 +38,9 @@ dataSources:
     name: ENSRegistryOld
     network: mainnet
     source:
-      address: '0x314159265dd8dbb310642f98f50c066173c1259b'
+      address: "0x058e527782F232A428AeE8899fbf82a56a98964B"
       abi: EnsRegistry
+      startBlock: 12159488
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -65,6 +67,7 @@ dataSources:
     network: mainnet
     source:
       abi: Resolver
+      startBlock: 12159488
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -106,8 +109,9 @@ dataSources:
     name: AuctionRegistrar
     network: mainnet
     source:
-      address: '0x6090a6e47849629b7245dfa1ca21d94cd15878ef'
+      address: '0xcB4F268E9E1067e88322135Af6a0d4f5e445b569'
       abi: AuctionRegistrar
+      startBlock: 12159488
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -135,8 +139,9 @@ dataSources:
     name: BaseRegistrar
     network: mainnet
     source:
-      address: '0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85'
+      address: "0xe649013113215243160B96d5eec8C03D4561e133"
       abi: BaseRegistrar
+      startBlock: 12159488
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -164,8 +169,9 @@ dataSources:
     name: EthRegistrarController
     network: mainnet
     source:
-      address: '0x283Af0B28c62C092C9727F1Ee09c02CA627EB7F5'
+      address: "0x70F46dDb5F5B7Ff10Fba7a33073191AaB7F1CFBD"
       abi: EthRegistrarController
+      startBlock: 12159488
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -184,6 +190,7 @@ dataSources:
     network: mainnet
     source:
       abi: Deed
+      startBlock: 12159488
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3

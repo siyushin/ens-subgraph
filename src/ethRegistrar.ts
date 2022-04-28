@@ -72,7 +72,7 @@ export function handleNameRegisteredByController(event: ControllerNameRegistered
   let domain = new Domain(crypto.keccak256(concat(rootNode, event.params.label)).toHex())
   if(domain.labelName !== event.params.name) {
     domain.labelName = event.params.name
-    domain.name = event.params.name + '.eth'
+    domain.name = event.params.name + '.ela'
     domain.save()
   }
 }
