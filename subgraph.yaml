@@ -12,7 +12,7 @@ dataSources:
     source:
       address: "0xb9930eF91BADBC650269c382E3B5877574e6a7fc"
       abi: EnsRegistry
-      startBlock: 12159488
+      startBlock: 12125000
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -40,7 +40,7 @@ dataSources:
     source:
       address: "0x058e527782F232A428AeE8899fbf82a56a98964B"
       abi: EnsRegistry
-      startBlock: 12159488
+      startBlock: 12125000
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -67,7 +67,7 @@ dataSources:
     network: mainnet
     source:
       abi: Resolver
-      startBlock: 12159488
+      startBlock: 12125000
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -111,7 +111,7 @@ dataSources:
     source:
       address: '0xcB4F268E9E1067e88322135Af6a0d4f5e445b569'
       abi: AuctionRegistrar
-      startBlock: 12159488
+      startBlock: 12125000
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -141,7 +141,7 @@ dataSources:
     source:
       address: "0xe649013113215243160B96d5eec8C03D4561e133"
       abi: BaseRegistrar
-      startBlock: 12159488
+      startBlock: 12125000
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -171,7 +171,7 @@ dataSources:
     source:
       address: "0x70F46dDb5F5B7Ff10Fba7a33073191AaB7F1CFBD"
       abi: EthRegistrarController
-      startBlock: 12159488
+      startBlock: 12125000
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -190,7 +190,7 @@ dataSources:
     network: mainnet
     source:
       abi: Deed
-      startBlock: 12159488
+      startBlock: 12125000
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
