@@ -28,7 +28,8 @@ import {
 // Import entity types generated from the GraphQL schema
 import { Account, Domain, Registration, NameRegistered, NameRenewed, NameTransferred } from './types/schema'
 
-var rootNode:ByteArray = byteArrayFromHex("93cdeb708b7545dc668eb9280176169d1c33cfd8ed6f04690a0bcc88a93fc4ae")
+// var rootNode:ByteArray = byteArrayFromHex("93cdeb708b7545dc668eb9280176169d1c33cfd8ed6f04690a0bcc88a93fc4ae")
+var rootNode: ByteArray = byteArrayFromHex("2cc116761f592ca63b5701189b06827a6d04037c4b7593ff66671455ed5779d2")
 
 export function handleNameRegistered(event: NameRegisteredEvent): void {
   let account = new Account(event.params.owner.toHex())
@@ -66,7 +67,7 @@ export function handleNameRenewedByController(event: ControllerNameRenewedEvent)
 
 function setNamePreimage(name: string, label: Bytes, cost: BigInt): void {
   const labelHash = crypto.keccak256(ByteArray.fromUTF8(name));
-  if(!labelHash.equals(label)) {
+  if (!labelHash.equals(label)) {
     log.warning(
       "Expected '{}' to hash to {}, but got {} instead. Skipping.",
       [name, labelHash.toHex(), label.toHex()]
@@ -74,20 +75,20 @@ function setNamePreimage(name: string, label: Bytes, cost: BigInt): void {
     return;
   }
 
-  if(name.indexOf(".") !== -1) {
+  if (name.indexOf(".") !== -1) {
     log.warning("Invalid label '{}'. Skipping.", [name]);
     return;
   }
 
   let domain = Domain.load(crypto.keccak256(concat(rootNode, label)).toHex())!
-  if(domain.labelName !== name) {
+  if (domain.labelName !== name) {
     domain.labelName = name
-    domain.name = name + '.eth'
+    domain.name = name + '.ela'
     domain.save()
   }
 
   let registration = Registration.load(label.toHex());
-  if(registration == null) return
+  if (registration == null) return
   registration.labelName = name
   registration.cost = cost
   registration.save()
@@ -113,7 +114,7 @@ export function handleNameTransferred(event: TransferEvent): void {
 
   let label = uint256ToByteArray(event.params.tokenId)
   let registration = Registration.load(label.toHex())
-  if(registration == null) return;
+  if (registration == null) return;
 
   registration.registrant = account.id
   registration.save()
