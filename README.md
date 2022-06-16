@@ -86,7 +86,15 @@ Here we have example queries, so that you don't have to type them in yourself ea
 2. 修改`./subgraph.yaml`，注意编辑`dataSources`下面每个`source`的`address`和`startBlock`。
 3. checkout `https://github.com/graphprotocol/graph-node`，和当前repo放在同一级路径下，并按其说明文档启动docker。
 
-然后回到当前repo，执行：
+## 进入 `graph-node` 根目录
+
+```shell
+cd ./docker
+rm -rf data/
+docker-compose up
+```
+
+## 回到当前 `sub-graph` 根目录
 
 ```shell
 yarn
