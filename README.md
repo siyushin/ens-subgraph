@@ -82,7 +82,7 @@ Here we have example queries, so that you don't have to type them in yourself ea
 
 准备工作：
 
-1. 修改`./src/config.js`，指定`tld`和该`tld`的`namehash`；
+1. 修改`./src/config.ts`，指定`tld`和该`tld`的`namehash`；
 2. 修改`./subgraph.yaml`，注意编辑`dataSources`下面每个`source`的`address`和`startBlock`。
 3. checkout `https://github.com/graphprotocol/graph-node`，和当前repo放在同一级路径下，并按其说明文档启动docker。
 
